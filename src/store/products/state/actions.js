@@ -3,10 +3,10 @@ import { sliceName } from "../constants";
 
 import { fetchAllProducts, fetchProductDetails } from "../../../utils/api";
 
-export const getProductList = createAsyncThunk(`${sliceName}/getProductList`, () =>
+export const actionGetProductList = createAsyncThunk(`${sliceName}/getProductList`, () =>
   fetchAllProducts(),
 );
 
-export const getProductDetail = createAsyncThunk(`${sliceName}/getProductDetails`, (id) =>
+export const actionGetProductDetail = createAsyncThunk(`${sliceName}/getProductDetails`, (id) =>
   fetchProductDetails(id),
 );

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { addItemToCart } from "./actions";
+import { actionAddItemToCart } from "./actions";
 import { sliceName, initState } from "../constants";
 
 // Cart Slice
@@ -7,15 +7,15 @@ const cartSlice = createSlice({
   name: sliceName,
   initialState: initState,
   extraReducers: (builder) => {
-    builder.addCase(addItemToCart.pending, (state) => {
+    builder.addCase(actionAddItemToCart.pending, (state) => {
       state.isLoading = true;
     });
 
-    builder.addCase(addItemToCart.fulfilled, (state) => {
+    builder.addCase(actionAddItemToCart.fulfilled, (state) => {
       state.isLoading = false;
     });
 
-    builder.addCase(addItemToCart.rejected, () => {});
+    builder.addCase(actionAddItemToCart.rejected, () => {});
   },
 });
 

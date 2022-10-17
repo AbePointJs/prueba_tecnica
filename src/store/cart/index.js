@@ -1,4 +1,4 @@
 import cartReducer from "./state/reducers";
-import { addItemToCart } from "./state/actions";
+import { actionAddItemToCart } from "./state/actions";
 
-export { cartReducer, addItemToCart };
+export { cartReducer, actionAddItemToCart };

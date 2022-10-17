@@ -1,16 +1,9 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getProductList } from "./store/products";
+import React from "react";
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getProductList());
-  }, []);
-
   return (
     <div>
+      <h1>HOLA QUE TAL</h1>
       <button type="button">Hola</button>
     </div>
   );

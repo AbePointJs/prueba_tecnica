@@ -1,17 +1,17 @@
 import productsReducer from "./state/reducers";
 import { sliceName as n } from "./constants";
-import { getProductList, getProductDetail } from "./state/actions";
+import { actionGetProductList, actionGetProductDetail } from "./state/actions";
 
 // Action selectors para ser usados por useSelector
-const selectLoading = (state) => state[n].isLoading;
+const selectProductsLoading = (state) => state[n].isLoading;
 const selectProducts = (state) => state[n].products;
-const selectError = (state) => state[n].error;
+const selectProductsError = (state) => state[n].error;
 
 export {
   productsReducer,
-  selectLoading,
+  selectProductsLoading,
   selectProducts,
-  getProductList,
-  getProductDetail,
-  selectError,
+  actionGetProductList,
+  actionGetProductDetail,
+  selectProductsError,
 };
