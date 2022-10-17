@@ -1,7 +1,6 @@
 import React from "react";
 
 function App() {
-  // prueba
   return (
     <div>
       <h1>HOLA QUE TAL</h1>
