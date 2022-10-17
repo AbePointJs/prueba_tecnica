@@ -32,6 +32,13 @@
         "namedComponents": "function-declaration"
       }
     ],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state", "store"]
+      }
+    ]
   }
 }
