@@ -20,7 +20,6 @@
   "rules": {
     "prettier/prettier": ["warn", {}, { "usePrettierrc": true }], // Use .prettierrc file as source
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], // To allow importing .jsx files
-    "no-console": 1,
     "no-unused-vars": 1,
     "import/no-unresolved": 2,
     "no-undefined": 2,
@@ -39,6 +38,7 @@
         "props": true,
         "ignorePropertyModificationsFor": ["state", "store"]
       }
-    ]
+    ],
+    "no-console": ["error", { "allow": ["warn", "error"] }]
   }
 }
