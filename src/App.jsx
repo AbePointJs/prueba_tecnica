@@ -1,26 +1,27 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { actionGetProductList, selectProducts } from "./store/products";
+import { Route, Routes } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { actionGetProductList } from "./store/products";
+
+import Layout from "./layout";
+import ProductDetails from "./pages/ProductDetails";
+import ProductList from "./pages/ProductList";
 
 function App() {
   const dispatch = useDispatch();
-  const products = useSelector(selectProducts);
 
   useEffect(() => {
     dispatch(actionGetProductList());
   }, []);
 
-  const onClick = () => {
-    console.log(products);
-  };
-
   return (
-    <div>
-      <h1>HOLA QUE TAL!!!!</h1>
-      <button type="button" onClick={onClick}>
-        Hola
-      </button>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<ProductList />} />
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
+      </Routes>
+    </Layout>
   );
 }
 

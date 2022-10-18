@@ -26,14 +26,14 @@ const request = (url, method, data) =>
 const interceptor = async (url, method, data) => {
   const cache = await axiosCache.storage.get(url);
   if (cache.state === "stale") {
-    return cache.data.data;
+    return cache.data;
   }
   return request(url, method, data);
 };
 
 export default class API {
   static get(url) {
-    return interceptor(url, "GET");
+    return interceptor(url, "GET").then((res) => res.data);
   }
 
   static post(url, data) {
