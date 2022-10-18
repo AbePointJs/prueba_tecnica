@@ -39,6 +39,7 @@
         "ignorePropertyModificationsFor": ["state", "store"]
       }
     ],
-    "no-console": ["error", { "allow": ["warn", "error"] }]
+    "no-console": ["error", { "allow": ["warn", "error", "log"] }],
+    "jest/no-hooks": ["error", { "allow": ["beforeEach", "afterEach"] }]
   }
 }
