@@ -1,0 +1,11 @@
+.container {
+  flex: 0.5;
+  justify-self: baseline;
+  align-self: flex-end;
+}
+.container > ol {
+  list-style-type: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}

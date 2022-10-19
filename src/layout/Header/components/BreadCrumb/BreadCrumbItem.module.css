@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  max-width: 8rem;
+  flex: 1;
+  min-height: 20px;
+  position: relative;
+}
+
+.textCont {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 3;
+  background-color: var(--color);
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.textCont:hover {
+  color: white;
+  text-shadow: 2px 2px 5px white;
+}
+
+/* .textCont > p {
+} */
+
+.triangle {
+  height: 100%;
+  position: absolute;
+  background-color: var(--color);
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+  max-width: 40px;
+  flex: 1;
+  width: 10%;
+  transform: translate(0, -50%);
+  top: 50%;
+  left: 100%;
+  z-index: 1;
+  box-shadow: 2px 2px 5px 20px var(--color);
+}
+
+/* .rectangleContainer > div {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 20px solid red;
+  border-bottom: 20px solid transparent;
+  transform: translate(20px, -50%);
+  right: 0;
+  top: 50%;
+  z-index: 1;
+} */

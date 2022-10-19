@@ -1,9 +1,17 @@
 html {
   --black: #393e46;
+  --white: #eeeeee;
+  box-sizing: border-box;
+}
+html *,
+html *::before,
+html::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;

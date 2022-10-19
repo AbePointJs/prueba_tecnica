@@ -1,0 +1,11 @@
+.container {
+  position: relative;
+  /* QUITAR */
+  width: 5rem;
+  height: 5rem;
+}
+
+.container > svg {
+  width: 100%;
+  height: 100%;
+}

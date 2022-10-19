@@ -1,3 +1,10 @@
 .container {
   cursor: pointer;
 }
+
+.container > p {
+  color: var(--white);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
