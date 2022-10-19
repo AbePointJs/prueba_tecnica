@@ -14,21 +14,21 @@ function delay(time) {
 describe("<Icon />", () => {
   it("change color when animate prop", async () => {
     expect.assertions(1);
-    render(<Icon animate />);
+    const animate = true;
+    render(<Icon animate={animate} />);
     const firstPath = screen.getByTestId("first-path");
 
-    fireEvent.mouseEnter(firstPath);
     await delay(1000);
-    expect(firstPath).toHaveStyle("fill: white");
+    expect(firstPath).toHaveStyle("fill: rgba(255, 255, 255, 1)");
   });
 
-  it("dont change color when animate is not present", async () => {
+  it("dont change color when animate is false", async () => {
     expect.assertions(1);
-    render(<Icon />);
+    const animate = false;
+    render(<Icon animate={animate} />);
     const firstPath = screen.getByTestId("first-path");
 
-    fireEvent.mouseEnter(firstPath);
     await delay(1000);
-    expect(firstPath).not.toHaveStyle("fill: white");
+    expect(firstPath).not.toHaveStyle("fill: rgba(255, 255, 255, 1)");
   });
 });
