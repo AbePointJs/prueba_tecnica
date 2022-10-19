@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, fireEvent, cleanup } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Icon from "../Icon";
 import "@testing-library/jest-dom/extend-expect";
 

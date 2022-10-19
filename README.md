@@ -3,10 +3,13 @@
 Prueba técnica propuesta por inditex consistente en la creación de una SPA para la venta de teléfonos móviles. Este proyecto ha sido creado con [Create React App](https://github.com/facebook/create-react-app) e implementa las siguientes funcionalidades:
 
 - Creación dinámica de items
+- CI/CD con firebase y github actios
 - Routing en cliente
 - Lazy loading
 - Integración de APIs
 - (por completar)
+
+Para ver página pulsa [aquí](https://pruebatecnica-89230.web.app/)
 
 ## Scripts
 
