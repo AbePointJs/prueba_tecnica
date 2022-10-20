@@ -6,10 +6,13 @@ import "@testing-library/jest-dom/extend-expect";
 
 const numPrice = 100;
 const stringPrice = "100";
+const invalidPriceString = "";
+const invalidStringWithSpaces = "      ";
 const euros = "€";
 const dollars = "$";
 const shouldRender = "100€";
 const shouldRenderDollars = "100$";
+const shouldRenderInvalid = "-€";
 
 describe("<PriceTag />", () => {
   afterEach(cleanup);
@@ -45,6 +48,22 @@ describe("<PriceTag />", () => {
     render(<PriceTag price={numPrice} currency={dollars} />);
 
     const txt = screen.getByText(shouldRenderDollars);
+    expect(txt).toBeInTheDocument();
+  });
+
+  it("renders invalid price on invalid string price", () => {
+    expect.assertions(1);
+    render(<PriceTag price={invalidPriceString} />);
+
+    const txt = screen.getByText(shouldRenderInvalid);
+    expect(txt).toBeInTheDocument();
+  });
+
+  it("renders invalid price on space strings", () => {
+    expect.assertions(1);
+    render(<PriceTag price={invalidPriceString} />);
+
+    const txt = screen.getByText(shouldRenderInvalid);
     expect(txt).toBeInTheDocument();
   });
 });
