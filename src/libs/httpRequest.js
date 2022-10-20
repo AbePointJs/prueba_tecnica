@@ -27,7 +27,7 @@ const interceptor = async (url, method, data) => {
   if (cache.state === "stale") {
     return cache.data;
   }
-  return request(url, method, data).then((res) => res.data);
+  return request(url, method, data);
 };
 
 export default class API {
