@@ -2,10 +2,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  max-width: 8rem;
-  flex: 1;
+  /* flex: 1; */
+  padding: 0 min(3rem, 2vw);
   height: 30px;
   position: relative;
+  background-color: var(--color);
 }
 
 .textCont {
@@ -14,7 +15,6 @@
   justify-content: center;
   align-items: center;
   flex: 3;
-  background-color: var(--color);
   flex: 1;
   font-size: 1.1rem;
   font-weight: 500;
@@ -35,9 +35,7 @@
   position: absolute;
   background-color: var(--color);
   clip-path: polygon(100% 50%, 0 0, 0 100%);
-  max-width: 40px;
-  flex: 1;
-  width: 10%;
+  width: min(10%, 40px);
   transform: translate(0, -50%);
   top: 50%;
   left: 100%;

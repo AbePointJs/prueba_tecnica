@@ -7,7 +7,7 @@ function ProductListPage() {
   const products = useSelector(selectProducts);
   const loading = useSelector(selectProductsLoading);
 
-  return <main>{loading ? null : <ProductList products={products} />}</main>;
+  return <main>{loading ? <h1>LOADING!</h1> : <ProductList products={products} />}</main>;
 }
 
 export default ProductListPage;
