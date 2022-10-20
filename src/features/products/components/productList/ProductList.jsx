@@ -6,6 +6,7 @@ import styles from "./ProductList.module.css";
 
 function ProductList({ products }) {
   const navigate = useNavigate();
+
   return (
     <div className={styles.container}>
       {products.map(({ id, brand, imgUrl, model, price }) => (
