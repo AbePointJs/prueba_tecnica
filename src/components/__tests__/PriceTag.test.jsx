@@ -59,9 +59,9 @@ describe("<PriceTag />", () => {
     expect(txt).toBeInTheDocument();
   });
 
-  it("renders invalid price on space strings", () => {
+  it("renders invalid price on only space strings", () => {
     expect.assertions(1);
-    render(<PriceTag price={invalidPriceString} />);
+    render(<PriceTag price={invalidStringWithSpaces} />);
 
     const txt = screen.getByText(shouldRenderInvalid);
     expect(txt).toBeInTheDocument();

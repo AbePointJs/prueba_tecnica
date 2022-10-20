@@ -1,6 +1,7 @@
 import React from "react";
+import "@testing-library/jest-dom/extend-expect";
 import { render, screen } from "@testing-library/react";
-import Icon from "../Icon";
+import Icon from "../Icon/Icon";
 
 function delay(time) {
   return new Promise((res) => {
