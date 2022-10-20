@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Logo.module.css";
-import Icon from "../../../../components/Icon/Icon";
+import Icon from "../../../components/Icon/Icon";
 
 function Logo() {
   const [animate, setAnimate] = useState(false);
@@ -30,7 +30,7 @@ function Logo() {
       onKeyDown={onEnterKeyHandler}
       onMouseEnter={onMouseEnterHandler}
       onMouseLeave={onMouseLeaveHandler}
-      role="button"
+      role="link"
       tabIndex="0"
     >
       <Icon animate={animate} />

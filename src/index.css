@@ -1,6 +1,7 @@
 html {
   --black: #393e46;
-  --white: #eeeeee;
+  --white: #f9f9f9;
+  --gray: rgb(207, 203, 202);
   box-sizing: border-box;
 }
 html *,
@@ -16,6 +17,7 @@ body {
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--white);
 }
 
 code {

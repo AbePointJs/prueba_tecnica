@@ -1,5 +1,5 @@
 export const initState = {
-  isLoading: true,
+  isLoading: false,
   count: 0,
   error: false,
 };

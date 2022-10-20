@@ -10,5 +10,5 @@ export function fetchProductDetails(id) {
 }
 
 export function postItemToCard(data) {
-  return fetch.post(`${API_URL}/cart`, data);
+  return fetch.post(`${API_URL}/cart/`, data);
 }

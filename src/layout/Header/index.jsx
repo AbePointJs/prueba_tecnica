@@ -1,6 +1,6 @@
 import React from "react";
-import Logo from "./components/Logo/Logo";
-import BreadCrumb from "./components/BreadCrumb/BreadCrumb";
+import Logo from "./components/Logo";
+import { BreadCrumb } from "../../features/navigation";
 import { CartIcon } from "../../features/cart";
 import styles from "./Header.module.css";
 

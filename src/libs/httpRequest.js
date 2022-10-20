@@ -19,7 +19,6 @@ const request = (url, method, data) =>
     url,
     data,
     cache: cacheConfig,
-    // ID para retornar datos en sessionStorage
     id: url,
   }).catch((e) => console.error(e));
 
@@ -28,7 +27,7 @@ const interceptor = async (url, method, data) => {
   if (cache.state === "stale") {
     return cache.data;
   }
-  return request(url, method, data);
+  return request(url, method, data).then((res) => res.data);
 };
 
 export default class API {

@@ -1,6 +1,7 @@
 import React from "react";
+// import Proptypes from "prop-types";
 import { useLocation } from "react-router-dom";
-import BreadCrumbItem from "./BreadCrumbItem";
+import BreadCrumbItem from "./BreadCrumbItem/BreadCrumbItem";
 import styles from "./BreadCrumb.module.css";
 
 function BreadCrumb() {
@@ -24,9 +25,4 @@ function BreadCrumb() {
   );
 }
 
-// BreadCrumb.PropTypes = {
-//   path: PropTypes.arra,
-// };
-
-// BreadCrumb.defaultProps = {};
 export default BreadCrumb;
