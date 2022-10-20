@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import PriceTag from "../../../../components/priceTag/PriceTag";
+
 import styles from "./ProductItem.module.css";
 
 function ProductItem({ id, brand, imgUrl, model, price, navigate }) {
@@ -27,6 +29,7 @@ function ProductItem({ id, brand, imgUrl, model, price, navigate }) {
       <div className={styles.content}>
         <h2 className={styles.brand}>{brand}</h2>
         <h3 className={styles.model}>{model}</h3>
+        <PriceTag price={price} />
       </div>
     </article>
   );
