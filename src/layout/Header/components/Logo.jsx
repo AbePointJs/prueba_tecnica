@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Logo.module.css";
-import Icon from "../../../components/Icon/Icon";
+import { Icon } from "../../../components";
 
 function Logo() {
   const [animate, setAnimate] = useState(false);

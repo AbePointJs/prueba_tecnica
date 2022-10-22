@@ -21,49 +21,41 @@ describe("<PriceTag />", () => {
     expect.assertions(1);
 
     render(<PriceTag price={numPrice} currency={euros} />);
-
-    const txt = screen.getByText(shouldRender);
-    expect(txt).toBeInTheDocument();
+    expect(screen.getByText(shouldRender)).toBeInTheDocument();
   });
 
   it("render price when price is string", () => {
     expect.assertions(1);
 
     render(<PriceTag price={stringPrice} currency={euros} />);
-    const txt = screen.getByText(shouldRender);
-
-    expect(txt).toBeInTheDocument();
+    expect(screen.getByText(shouldRender)).toBeInTheDocument();
   });
 
   it("renders euros when currency is not defined", () => {
     expect.assertions(1);
-    render(<PriceTag price={numPrice} />);
 
-    const txt = screen.getByText(shouldRender);
-    expect(txt).toBeInTheDocument();
+    render(<PriceTag price={numPrice} />);
+    expect(screen.getByText(shouldRender)).toBeInTheDocument();
   });
 
   it("renders new currency when defined", () => {
     expect.assertions(1);
-    render(<PriceTag price={numPrice} currency={dollars} />);
 
-    const txt = screen.getByText(shouldRenderDollars);
-    expect(txt).toBeInTheDocument();
+    render(<PriceTag price={numPrice} currency={dollars} />);
+    expect(screen.getByText(shouldRenderDollars)).toBeInTheDocument();
   });
 
   it("renders invalid price on invalid string price", () => {
     expect.assertions(1);
-    render(<PriceTag price={invalidPriceString} />);
 
-    const txt = screen.getByText(shouldRenderInvalid);
-    expect(txt).toBeInTheDocument();
+    render(<PriceTag price={invalidPriceString} />);
+    expect(screen.getByText(shouldRenderInvalid)).toBeInTheDocument();
   });
 
   it("renders invalid price on only space strings", () => {
     expect.assertions(1);
-    render(<PriceTag price={invalidStringWithSpaces} />);
 
-    const txt = screen.getByText(shouldRenderInvalid);
-    expect(txt).toBeInTheDocument();
+    render(<PriceTag price={invalidStringWithSpaces} />);
+    expect(screen.getByText(shouldRenderInvalid)).toBeInTheDocument();
   });
 });

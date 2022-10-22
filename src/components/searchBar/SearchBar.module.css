@@ -1,0 +1,22 @@
+.container {
+  margin: 2rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.searchBar {
+  display: block;
+  background-color: var(--white);
+  padding: 0.2rem 0.3rem;
+  border-radius: 20px;
+  border: 2px solid var(--black);
+  width: 15rem;
+  height: 2rem;
+}
+.searchBar::placeholder {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}

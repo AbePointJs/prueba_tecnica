@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import PriceTag from "../../../../components/priceTag/PriceTag";
+import { PriceTag } from "../../../../components";
 
 import styles from "./ProductItem.module.css";
 
 function ProductItem({ brand, imgUrl, model, price, path }) {
   return (
     <article className={styles.article}>
-      <Link className={styles.container} to={path} data-testid="productItem">
+      <Link className={styles.container} to={path}>
         <div className={styles.imgContainer}>
           <img src={imgUrl} alt={model} />
         </div>

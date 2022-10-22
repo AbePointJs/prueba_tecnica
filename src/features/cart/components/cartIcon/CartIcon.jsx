@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { FiShoppingCart } from "react-icons/fi";
 import { useSelector } from "react-redux";
 import { selectCartCount, selectCartLoading } from "../../../../store/cart";
-import Loader from "../../../../components/Loader/Loader";
+import { Loader } from "../../../../components";
 import styles from "./CartIcon.module.css";
 
 function CartIcon({ color, size }) {

@@ -5,6 +5,7 @@ import { actionGetProductList, actionGetProductDetail } from "./state/actions";
 const selectProductsLoading = (state) => state.products.isLoading;
 const selectProducts = (state) => state.products.products;
 const selectProductsError = (state) => state.products.error;
+const selectProductDetail = (state) => state.products.productDetails;
 
 export {
   productsReducer,
@@ -13,4 +14,5 @@ export {
   actionGetProductList,
   actionGetProductDetail,
   selectProductsError,
+  selectProductDetail,
 };
