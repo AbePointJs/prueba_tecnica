@@ -13,7 +13,6 @@ function parsePrice(price, currency) {
   }
 
   const newPrice = parsed || "-";
-
   return `${newPrice}${currency}`;
 }
 

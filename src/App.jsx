@@ -4,8 +4,7 @@ import { useDispatch } from "react-redux";
 import { actionGetProductList } from "./store/products";
 
 import Layout from "./layout";
-import ProductDetailsPage from "./pages/ProductDetailsPage";
-import ProductListPage from "./pages/ProductListPage";
+import { ProductDetailsPage, ProductListPage } from "./pages";
 
 function App() {
   const dispatch = useDispatch();
