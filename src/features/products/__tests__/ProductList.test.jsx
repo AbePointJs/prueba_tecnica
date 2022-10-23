@@ -46,21 +46,4 @@ describe("<ProductList />", () => {
     // eslint-disable-next-line testing-library/no-node-access
     expect(container.children.length === mockProps.length).toBeTruthy();
   });
-
-  it("filters products", () => {
-    expect.assertions(2);
-    render(
-      <ProductList products={mockPropsFilter} filterFields={["brand"]} filterString="Samsung" />,
-      {
-        wrapper: BrowserRouter,
-      },
-    );
-
-    const list = screen.getByTestId("productList");
-    const samsung = screen.getByText("Samsung");
-
-    expect(samsung).toBeInTheDocument();
-    // eslint-disable-next-line testing-library/no-node-access
-    expect(list.children.length === 1).toBeTruthy();
-  });
 });

@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { actionGetProductDetail, selectProductDetail } from "../../store/products";
+import {
+  actionGetProductDetail,
+  selectProductDetail,
+  selectProductsLoading,
+} from "../../store/products";
 import { ProductSpecifications } from "../../features/products";
 import { PriceTag } from "../../components";
 import styles from "./ProductDetailsPage.module.css";
@@ -26,33 +30,42 @@ function ProductDetailsPage() {
     sensors,
     imgUrl,
   } = useSelector(selectProductDetail);
+  const isLoading = useSelector(selectProductsLoading);
+
   useEffect(() => {
     dispatch(actionGetProductDetail(id));
   }, []);
 
+  if (isLoading) {
+    return <div>Hola!</div>;
+  }
+
   return (
     <main>
-      <ProductSpecifications
-        headers={["specification", "value"]}
-        content={{
-          marca: brand,
-          modelo: model,
-          cpu,
-          ram,
-          sistemaOperativo: os,
-          tamañoDePantalla: displaySize,
-          batería: battery,
-          displayType,
-          camaraPrincipal: primaryCamera,
-          camaraSecundaria: secondaryCmera,
-          memoriaInterna: internalMemory,
-          dimensiones: dimentions,
-          sensores: sensors,
-        }}
-      />
-      <div className={styles.imgContainer}>
-        <img src={imgUrl} alt="" />
-        <PriceTag price={price} />
+      <div className={styles.contentContainer}>
+        <div className={styles.imgContainer}>
+          <img src={imgUrl} alt={model} />
+          <PriceTag price={price} />
+        </div>
+        <ProductSpecifications
+          headers={["specification", "value"]}
+          id={id}
+          content={{
+            marca: brand,
+            modelo: model,
+            cpu,
+            ram,
+            sistemaOperativo: os,
+            tamañoDePantalla: displaySize,
+            batería: battery,
+            displayType,
+            camaraPrincipal: primaryCamera,
+            camaraSecundaria: secondaryCmera,
+            memoriaInterna: internalMemory,
+            dimensiones: dimentions,
+            sensores: sensors,
+          }}
+        />
       </div>
     </main>
   );

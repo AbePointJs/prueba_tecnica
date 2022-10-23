@@ -5,7 +5,7 @@ import { TableContainer, Table as TableComp, Thead, Tbody, Td, Tr, Th } from "@c
 function ProductSpecifications({ content, headers, variant, colorScheme, className }) {
   return (
     <TableContainer className={className}>
-      <TableComp variant={variant} colorScheme={colorScheme}>
+      <TableComp variant={variant} colorScheme={colorScheme} size="sm">
         <Thead>
           <Tr>
             {headers.map((h) => (
@@ -20,13 +20,14 @@ function ProductSpecifications({ content, headers, variant, colorScheme, classNa
             // Parse to add spaces and all to lower case
             const title = key.replace(/[A-Z ]+/, ` $&`).toLowerCase();
             return (
-              <Tr key={key}>
+              <Tr key={`${key} ${elem}`}>
                 <Td>
                   <strong>{title}</strong>
                 </Td>
                 <Td>
-                  {elem.map((e) => (
-                    <div key={e}>{e}</div>
+                  {elem.map((e, i) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <div key={i}>{e}</div>
                   ))}
                 </Td>
               </Tr>
