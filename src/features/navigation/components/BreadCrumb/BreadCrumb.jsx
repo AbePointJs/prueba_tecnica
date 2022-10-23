@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import BreadCrumbItem from "./BreadCrumbItem/BreadCrumbItem";
 import styles from "./BreadCrumb.module.css";
 
