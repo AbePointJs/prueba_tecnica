@@ -41,11 +41,11 @@ function ProductDetailsPage() {
   }
 
   return (
-    <main>
+    <main className={styles.container}>
       <div className={styles.contentContainer}>
         <div className={styles.imgContainer}>
           <img src={imgUrl} alt={model} />
-          <PriceTag price={price} />
+          <PriceTag price={price} className={styles.priceTag} />
         </div>
         <ProductSpecifications
           headers={["specification", "value"]}

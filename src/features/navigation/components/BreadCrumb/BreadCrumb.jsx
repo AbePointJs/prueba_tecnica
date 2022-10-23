@@ -1,10 +1,11 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import BreadCrumbItem from "./BreadCrumbItem/BreadCrumbItem";
 import styles from "./BreadCrumb.module.css";
 
 function BreadCrumb() {
   const { pathname } = useLocation();
+
   const pathArr = pathname.split("/");
   if (!pathArr[pathArr.length - 1]) pathArr.shift();
 

@@ -16,18 +16,20 @@ function parsePrice(price, currency) {
   return `${newPrice}${currency}`;
 }
 
-function PriceTag({ price, currency }) {
-  return <div className={styles.container}>{parsePrice(price, currency)}</div>;
+function PriceTag({ price, currency, className }) {
+  return <div className={`${styles.container} ${className}`}>{parsePrice(price, currency)}</div>;
 }
 
 PriceTag.propTypes = {
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   currency: PropTypes.string,
+  className: PropTypes.string,
 };
 
 PriceTag.defaultProps = {
   price: "",
   currency: "€",
+  className: "",
 };
 
 export default PriceTag;

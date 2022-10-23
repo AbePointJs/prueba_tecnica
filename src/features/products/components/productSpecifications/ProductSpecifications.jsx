@@ -27,7 +27,9 @@ function ProductSpecifications({ content, headers, variant, colorScheme, classNa
                 <Td>
                   {elem.map((e, i) => (
                     // eslint-disable-next-line react/no-array-index-key
-                    <div key={i}>{e}</div>
+                    <span style={{ marginLeft: "1rem" }} key={i}>
+                      {e}
+                    </span>
                   ))}
                 </Td>
               </Tr>
