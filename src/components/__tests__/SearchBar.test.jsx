@@ -2,7 +2,7 @@
 import React from "react";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import SearchBar from "../searchBar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import "@testing-library/jest-dom/extend-expect";
 
 const mockFunction = jest.fn((x) => x);

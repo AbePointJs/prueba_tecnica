@@ -23,3 +23,26 @@
   border-radius: 5px;
   padding: 0.1rem 1rem;
 }
+
+@media (max-width: 800px) {
+  .contentContainer {
+    flex-flow: column nowrap;
+  }
+  .imgContainer {
+    margin-bottom: 2rem;
+  }
+
+  .productOptions {
+    margin: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .table {
+    overflow: hidden;
+    width: 100vw;
+  }
+  .table span {
+    display: block;
+  }
+}

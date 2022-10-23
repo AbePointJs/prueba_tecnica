@@ -36,6 +36,6 @@ export default class API {
   }
 
   static post(url, data) {
-    return interceptor(url, "POST", data);
+    return interceptor(url, "POST", data).then((res) => res.data);
   }
 }

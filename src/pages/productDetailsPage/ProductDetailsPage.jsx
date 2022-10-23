@@ -6,30 +6,14 @@ import {
   selectProductDetail,
   selectProductsLoading,
 } from "../../store/products";
-import { ProductSpecifications } from "../../features/products";
+import { ProductSpecifications, ProductOptions } from "../../features/products";
 import { PriceTag } from "../../components";
 import styles from "./ProductDetailsPage.module.css";
 
 function ProductDetailsPage() {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const {
-    brand,
-    model,
-    price,
-    cpu,
-    ram,
-    os,
-    displaySize,
-    battery,
-    displayType,
-    primaryCamera,
-    secondaryCmera,
-    internalMemory,
-    dimentions,
-    sensors,
-    imgUrl,
-  } = useSelector(selectProductDetail);
+  const data = useSelector(selectProductDetail);
   const isLoading = useSelector(selectProductsLoading);
 
   useEffect(() => {
@@ -44,29 +28,31 @@ function ProductDetailsPage() {
     <main className={styles.container}>
       <div className={styles.contentContainer}>
         <div className={styles.imgContainer}>
-          <img src={imgUrl} alt={model} />
-          <PriceTag price={price} className={styles.priceTag} />
+          <img src={data.imgUrl} alt={data.model} />
+          <PriceTag price={data.price} className={styles.priceTag} />
         </div>
         <ProductSpecifications
           headers={["specification", "value"]}
-          id={id}
+          className={styles.table}
+          id={data.id}
           content={{
-            marca: brand,
-            modelo: model,
-            cpu,
-            ram,
-            sistemaOperativo: os,
-            tamañoDePantalla: displaySize,
-            batería: battery,
-            displayType,
-            camaraPrincipal: primaryCamera,
-            camaraSecundaria: secondaryCmera,
-            memoriaInterna: internalMemory,
-            dimensiones: dimentions,
-            sensores: sensors,
+            marca: data.brand,
+            modelo: data.model,
+            cpu: data.cpu,
+            ram: data.ram,
+            sistemaOperativo: data.os,
+            tamañoDePantalla: data.displaySize,
+            batería: data.battery,
+            displayType: data.displayType,
+            camaraPrincipal: data.primaryCamera,
+            camaraSecundaria: data.secondaryCmera,
+            memoriaInterna: data.internalMemory,
+            dimensiones: data.dimentions,
+            sensores: data.sensors,
           }}
         />
       </div>
+      <ProductOptions options={data.options} className={styles.productOptions} />
     </main>
   );
 }

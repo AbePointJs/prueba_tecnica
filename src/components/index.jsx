@@ -1,7 +1,6 @@
-import SearchBar from "./searchBar/SearchBar";
-import PriceTag from "./priceTag/PriceTag";
+import SearchBar from "./SearchBar/SearchBar";
+import PriceTag from "./PriceTag/PriceTag";
 import Icon from "./Icon/Icon";
-import Loader from "./loader/Loader";
-import OptionForm from "./optionForm/OptionForm";
+import Loader from "./Loader/Loader";
 
-export { SearchBar, PriceTag, Icon, Loader, OptionForm };
+export { SearchBar, PriceTag, Icon, Loader };
