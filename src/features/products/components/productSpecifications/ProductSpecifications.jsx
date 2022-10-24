@@ -54,7 +54,7 @@ ProductSpecifications.defaultProps = {
   headers: [""],
   variant: "striped",
   className: "",
-  colorScheme: "red",
+  colorScheme: "gray",
 };
 
 export default ProductSpecifications;

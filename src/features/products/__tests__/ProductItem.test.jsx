@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, cleanup } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import "@testing-library/jest-dom/extend-expect";
-import { ProductItem } from "../index";
+import ProductItem from "../components/productItem/ProductItem";
 
 const brand = "Samsumg";
 const imgUrl = "https://front-test-api.herokuapp.com/images/ZmGrkLRPXOTpxsU4jjAcv.jpg";

@@ -31,28 +31,30 @@ function ProductDetailsPage() {
           <img src={data.imgUrl} alt={data.model} />
           <PriceTag price={data.price} className={styles.priceTag} />
         </div>
-        <ProductSpecifications
-          headers={["specification", "value"]}
-          className={styles.table}
-          id={data.id}
-          content={{
-            marca: data.brand,
-            modelo: data.model,
-            cpu: data.cpu,
-            ram: data.ram,
-            sistemaOperativo: data.os,
-            tamañoDePantalla: data.displaySize,
-            batería: data.battery,
-            displayType: data.displayType,
-            camaraPrincipal: data.primaryCamera,
-            camaraSecundaria: data.secondaryCmera,
-            memoriaInterna: data.internalMemory,
-            dimensiones: data.dimentions,
-            sensores: data.sensors,
-          }}
-        />
+        <div>
+          <ProductSpecifications
+            headers={["specification", "value"]}
+            className={styles.table}
+            id={data.id}
+            content={{
+              marca: data.brand,
+              modelo: data.model,
+              cpu: data.cpu,
+              ram: data.ram,
+              sistemaOperativo: data.os,
+              tamañoDePantalla: data.displaySize,
+              batería: data.battery,
+              displayType: data.displayType,
+              camaraPrincipal: data.primaryCamera,
+              camaraSecundaria: data.secondaryCmera,
+              memoriaInterna: data.internalMemory,
+              dimensiones: data.dimentions,
+              sensores: data.sensors,
+            }}
+          />
+          <ProductOptions options={data.options} className={styles.productOptions} />
+        </div>
       </div>
-      <ProductOptions options={data.options} className={styles.productOptions} />
     </main>
   );
 }

@@ -30,7 +30,9 @@ function ProductOptions({ id, options, className }) {
             </Select>
           );
         })}
-        <Button type="submit">Submit</Button>
+        <Button type="submit" colorScheme="red">
+          Submit
+        </Button>
       </Stack>
     </form>
   );

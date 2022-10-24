@@ -13,7 +13,7 @@ function ProductList({ products }) {
           model={model}
           price={price}
           key={id}
-          path={`/products/${id}`}
+          path={`/products/${id}#name=${model}`}
           id={id}
         />
       ))}

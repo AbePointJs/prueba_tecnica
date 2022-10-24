@@ -1,7 +1,7 @@
 /* eslint-disable jest/no-hooks */
 import React from "react";
 import { render, screen, cleanup } from "@testing-library/react";
-import PriceTag from "../PriceTag/PriceTag";
+import PriceTag from "../priceTag/PriceTag";
 import "@testing-library/jest-dom/extend-expect";
 
 const numPrice = 100;

@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { selectProducts, selectProductsLoading } from "../../store/products";
 import { ProductList, filterProducts } from "../../features/products";
 import { SearchBar } from "../../components";
+import styles from "./ProductListPage.module.css";
 
 function ProductListPage() {
   const [inputString, setInputString] = useState("");
@@ -11,7 +12,7 @@ function ProductListPage() {
 
   return (
     <main>
-      <SearchBar func={setInputString} />
+      <SearchBar func={setInputString} className={styles.searchBar} />
       {loading ? null : (
         <ProductList products={filterProducts(products, ["brand", "model"], inputString)} />
       )}

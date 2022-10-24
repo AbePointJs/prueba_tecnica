@@ -11,12 +11,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // eslint-disable-next-line jest/require-hook
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <ChakraProvider>
+    <ChakraProvider>
+      <Provider store={store}>
         <BrowserRouter>
           <App />
         </BrowserRouter>
-      </ChakraProvider>
-    </Provider>
+      </Provider>
+    </ChakraProvider>
   </React.StrictMode>,
 );

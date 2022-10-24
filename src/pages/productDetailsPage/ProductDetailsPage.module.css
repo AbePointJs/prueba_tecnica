@@ -1,6 +1,7 @@
 .container {
   margin-top: 3rem;
 }
+
 .contentContainer {
   display: flex;
   justify-content: space-evenly;
@@ -9,7 +10,9 @@
 
 .imgContainer {
   position: relative;
+  align-self: flex-start;
 }
+
 .imgContainer > img {
   width: 20rem;
 }
@@ -24,16 +27,18 @@
   padding: 0.1rem 1rem;
 }
 
+.productOptions {
+  margin-top: 3rem;
+}
+
 @media (max-width: 800px) {
   .contentContainer {
     flex-flow: column nowrap;
   }
-  .imgContainer {
-    margin-bottom: 2rem;
-  }
 
-  .productOptions {
-    margin: 2rem;
+  .imgContainer {
+    align-self: center;
+    margin-bottom: 2rem;
   }
 }
 
@@ -44,5 +49,8 @@
   }
   .table span {
     display: block;
+  }
+  .productOptions {
+    margin: 2rem;
   }
 }
